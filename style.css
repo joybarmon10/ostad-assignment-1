@@ -27,7 +27,7 @@ body {
 
 .fixed-sidenav {
   position: fixed;
-  top: 3%;
+  top: 2.1%;
   left: 0;
   width: 100%;
   transform: translateY(-50%);
@@ -172,7 +172,7 @@ body {
 .main {
   transition: margin-left 0.5s;
   margin-left: 280px;
-  padding: 20px;
+  padding: 60px;
 }
 
 .head-line {
@@ -398,7 +398,9 @@ button {
     font-size: 30px;
     margin-top: 30px;
   }
-
+  .main{
+    padding: 20px;
+  }
   .head-line-2 {
     font-size: 20px;
   }
