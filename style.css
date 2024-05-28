@@ -128,43 +128,42 @@ body {
   margin-top: 60px;
 }
 
-
 :root {
-    --orange:rgb(63, 19, 1);
-    --gray:  rgb(243, 82, 19);
-    --gray-shine: #f56a2a;
-    --white-off: #faf8f8;
-    --sans: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  --orange: rgb(63, 19, 1);
+  --gray: rgb(243, 82, 19);
+  --gray-shine: #f56a2a;
+  --white-off: #faf8f8;
+  --sans: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
 .list-hover-slide {
-    a {
-       position: relative;
-        overflow: hidden; 
+  a {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: 0.35s ease color;
+    &:before {
+      content: "";
       display: block;
-        position: relative;
-        z-index: 1;
-        transition: .35s ease color;
-        &:before {
-            content: '';
-            display: block;
-            z-index: -1;
-            position: absolute;
-            left: -100%;
-            top: 0;
-            width: 245px;
-            height: 100%;
-            border-right: solid 5px var(--orange);
-            background: var(--gray-shine);
-            transition: .35s ease left;
-        }
-        &.is-current,
-        &:hover {
-            &:before {
-                left: 0;
-            }
-        }
+      z-index: -1;
+      position: absolute;
+      left: -100%;
+      top: 0;
+      width: 245px;
+      height: 100%;
+      border-right: solid 5px var(--orange);
+      background: var(--gray-shine);
+      transition: 0.35s ease left;
     }
+    &.is-current,
+    &:hover {
+      &:before {
+        left: 0;
+      }
+    }
+  }
 }
 
 /* sidenav end */
@@ -377,6 +376,15 @@ button {
   margin-top: 10px;
 }
 
+footer {
+  margin-top: 70px;
+  text-align: center;  
+}
+footer small a{
+  text-decoration: none;
+  color: #f35213;
+  border-bottom: #f35213 1px solid;
+}
 @media (max-width: 768px) {
   .sidenav {
     width: 0;
@@ -398,7 +406,7 @@ button {
     font-size: 30px;
     margin-top: 30px;
   }
-  .main{
+  .main {
     padding: 20px;
   }
   .head-line-2 {
